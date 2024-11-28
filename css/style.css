@@ -92,7 +92,7 @@
 
 .btn.btn-dark:hover {
     color: var(--bs-primary);
-    background: var(--bs-light);
+    background: var(--bs-dark);
 }
 
 /*** Navbar Start ***/
