@@ -377,7 +377,7 @@
     height: 100%;
     text-align: center;
     border-radius: 10px;
-    background: var(--bs-white);
+    background: black;
     z-index: 1;
 }
 
@@ -389,7 +389,7 @@
     bottom: 0;
     left: 0;
     border-radius: 10px;
-    background: var(--bs-primary);
+    background: black;
     transition: 0.5s;
     z-index: 2;
 }
@@ -399,7 +399,7 @@
 }
 
 .service .service-item i {
-    color: var(--bs-primary);
+    color: var(--bs-warning);
     transition: 0.5s;
 }
 
@@ -527,8 +527,8 @@
     position: absolute;
     top: -58px;
     left: 0;
-    background: var(--bs-primary);
-    color: var(--bs-white);
+    background: #fcc200;
+    color: black;
     padding: 6px 35px;
     border-radius: 30px;
     transition: 0.5s;
@@ -543,8 +543,8 @@
     position: absolute;
     top: -58px;
     right: 0;
-    background: var(--bs-primary);
-    color: var(--bs-white);
+    background: #fcc200 ;
+    color: black;
     padding: 6px 35px;
     border-radius: 30px;
     transition: 0.5s;
@@ -669,7 +669,7 @@
 /*** Team Start ***/
 .team .team-item {
     position: relative;
-    background: var(--bs-primary);
+    background: var(--bs-warning);
     border-radius: 10px;
 }
 
