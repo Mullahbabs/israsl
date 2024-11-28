@@ -86,7 +86,7 @@
 }
 
 .btn.btn-dark {
-    color: var(--bs-white);
+    color: black;
     border: none;
 }
 
@@ -97,7 +97,7 @@
 
 /*** Navbar Start ***/
 .nav-bar {
-    background: var(--bs-white);
+    background: black;
 }
 
 .sticky-top {
