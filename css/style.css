@@ -896,7 +896,7 @@
 }
 
 .footer .footer-item a:hover {
-    color: var(--bs-primary);
+    color: var(--bs-warning);
 }
 
 .footer .footer-item .footer-btn a,
@@ -909,7 +909,7 @@
 }
 
 .footer .footer-item .footer-btn a:hover i {
-    color: var(--bs-primary);
+    color: var(--bs-warning);
 }
 
 .footer .footer-item .opening-date {
@@ -926,7 +926,7 @@
 /*** copyright Start ***/
 .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: var(--bs-dark);
+    background: var(--bs-warning);
 }
 /*** copyright end ***/
 
