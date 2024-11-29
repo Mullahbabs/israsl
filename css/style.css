@@ -221,7 +221,7 @@
     transform: translateY(-50%);
     margin-right: -60px;
     border-radius: 60px;
-    background: var(--bs-primary);
+    background: var(--bs-warning);
     color: var(--bs-white);
     font-size: 26px;
     display: flex;
@@ -231,7 +231,7 @@
 }
 .header-carousel .owl-nav .owl-next:hover {
     box-shadow: inset 0 0 100px 0 var(--bs-light);
-    color: var(--bs-primary);
+    color: var(--bs-warning);
 }
 
 .header-carousel .owl-nav .owl-next i {
