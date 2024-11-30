@@ -91,25 +91,25 @@
                             <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
                                 <div class="ticket-form p-5">
                                     <h2 class="text-warning text-uppercase mb-4">Quick Application</h2>
-                                    <form>
+                                    <form id="contactform">
                                         <div class="row g-4">
                                             <div class="col-12">
-                                                <input type="text" class="form-control border-0 py-2" id="name" placeholder="Your Name">
+                                                <input type="text" class="form-control border-0 py-2" id="name" name="name" placeholder="Your Name">
                                             </div>
                                             <div class="col-12 col-xl-6">
-                                                <input type="email" class="form-control border-0 py-2" id="email" placeholder="Your Email">
+                                                <input type="email" class="form-control border-0 py-2" id="email" name="email" placeholder="Your Email">
                                             </div>
                                             <div class="col-12 col-xl-6">
-                                                <input type="phone" class="form-control border-0 py-2" id="phone" placeholder="Phone">
+                                                <input type="phone" class="form-control border-0 py-2" id="phone" name="phone" placeholder="Phone">
                                             </div>
                                             <div class="col-12 col-xl-6">
-                                                <input type="country" class="form-control border-0 py-2" id="country" placeholder="Country">
+                                                <input type="country" class="form-control border-0 py-2" id="country" name="country" placeholder="Country">
                                             </div>
                                             <div class="col-12 col-xl-6">
-                                                <input type="city" class="form-control border-0 py-2" id="city" placeholder="City">
+                                                <input type="city" class="form-control border-0 py-2" id="city" name="city" placeholder="City">
                                             </div>
                                             <div class="col-12">
-                                                <select class="form-select border-0 py-2" aria-label="Default select example">
+                                                <select class="form-select border-0 py-2" aria-label="Default select example" id="category" name="category">
                                                     <option selected>Job Category</option>
                                                     <option value="1">Sports & Arthlets</option>
                                                     <option value="2">Healthcare & Medical</option>
@@ -120,13 +120,13 @@
                                                 </select>
                                             </div>
                                             <div class="col-12">
-                                                <input class="form-control border-0 py-2" type="date">
+                                                <input class="form-control border-0 py-2" id="date" name="date" type="date">
                                             </div>
                                             <div class="col-12">
-                                                <input type="number" class="form-control border-0 py-2" id="number" placeholder="Years of Experience">
+                                                <input type="number" class="form-control border-0 py-2" id="experience" name="experience" placeholder="Years of Experience">
                                             </div>
                                             <div class="col-12">
-                                                <button type="button" class="btn btn-primary w-100 py-2 px-5">Start Now</button>
+                                                <button type="submit" name="submit" id="submit" class="btn btn-primary w-100 py-2 px-5">Start Now</button>
                                             </div>
                                         </div>
                                     </form>
@@ -711,6 +711,44 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+    <script>
+        emailjs.init("S-xQwmEV2I8oavOc1"); // Replace with your EmailJS User ID
+      </script>
+
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+      
+          const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            country: document.getElementById('country').value,
+            city: document.getElementById('city').value,
+            category: document.getElementById('category').value,
+            date: document.getElementById('date').value,
+            experience: document.getElementById('experience').value,
+          };
+      
+          emailjs
+            .send("service_6e8nzp3", "template_fraswac", formData)
+            .then(
+              (response) => {
+                console.log("SUCCESS!", response.status, response.text);
+                alert("Your message has been sent successfully!");
+              },
+              (error) => {
+                console.error("FAILED...", error);
+                alert("Oops! Something went wrong. Please try again.");
+              }
+            );
+        });
+      </script>
+      
 
     </body>
 
