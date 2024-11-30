@@ -31,7 +31,6 @@
         animateOut: 'slideOutDown',
         items: 1,
         autoplay: true,
-        autoplayHoverPause: true
         smartSpeed: 500,
         dots: false,
         loop: true,
